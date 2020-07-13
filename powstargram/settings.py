@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'imagekit',
     'blogapp',
     'accountapp',
-    'storages',
+    # 'storages',
 ]
 
 
@@ -138,29 +138,29 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AUTH_USER_MODEL = 'accountapp.User'
 
-AWS_ACCESS_KEY_ID = 'AKIAWXRYSLCL6ANJPNO7'
+# AWS_ACCESS_KEY_ID = 'AKIAWXRYSLCL6ANJPNO7'
 
-AWS_SECRET_ACCESS_KEY = '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'
+# AWS_SECRET_ACCESS_KEY = 'et7A+rvyBgNRiCp4GAd3vjGafL8HSCYgFWI1//dG'
 
-AWS_STORAGE_BUCKET_NAME = 'powstargrambucket'
+# AWS_STORAGE_BUCKET_NAME = 'powstargrambucket'
 
-AWS_REGION = 'us-east-1'
+# AWS_REGION = 'us-east-1'
 
-AWS_S3_CUSTOM_DOMAIN = 's3.%s.amazonaws.com/%s' % (AWS_REGION, AWS_STORAGE_BUCKET_NAME)
+# AWS_S3_CUSTOM_DOMAIN = 's3.%s.amazonaws.com/%s' % (AWS_REGION, AWS_STORAGE_BUCKET_NAME)
 
-AWS_S3_OBJECT_PARAMETERS = {
-    'CacheControl' : 'max-age=86400',
-}
+# AWS_S3_OBJECT_PARAMETERS = {
+#     'CacheControl' : 'max-age=86400',
+# }
 
-AWS_DEFAULT_ACL = 'public-read'
-AWS_LOCATION = 'static'
-AWS_S3_SECURE_URLS = False
+# AWS_DEFAULT_ACL = 'public-read'
+# AWS_LOCATION = 'static'
+# AWS_S3_SECURE_URLS = False
 
-STATIC_URL = 'http://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+# STATIC_URL = 'http://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-DEFAULT_FILE_STORAGE = 'blogapp.asset_storage.MediaStorage'
+# DEFAULT_FILE_STORAGE = 'blogapp.asset_storage.MediaStorage'
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url

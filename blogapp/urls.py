@@ -12,5 +12,4 @@ urlpatterns = [
     path('like/', views.post_like, name='post_like'),
     path('<int:post_id>/comment/create/', views.comment_create, name='comment_create'),
     path('<int:post_id>/comment/<int:comment_id>/delete/', views.comment_delete, name='comment_delete')
-] 
-# + static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
