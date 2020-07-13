@@ -1,0 +1,25 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+                <form method="POST" action="{% url 'accounts:signin' %}">
+                {% csrf_token %}      
+                <div class="form-group">
+                    <div class="title">Powstargram</div>
+                        <input type="text" class="form-control" name="username" placeholder="username">
+                        <input type="password" class="form-control" name="password" placeholder="password">
+                </div>
+                <input class="btn btn-primary" type="submit" value="로그인"><br/><br/>
+                
+                </form>
+        </div>
+    </div>
+    <div class="signin-box">
+        계정이 없으신가요? <a href="{% url 'accounts:signup' %}">회원가입</a>
+    </div>
+</body>
