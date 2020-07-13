@@ -1,0 +1,1 @@
+web: gunicorn powstargram.wsgi --log-file -
