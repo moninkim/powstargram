@@ -25,7 +25,6 @@ idna==2.10
 incremental==17.5.0
 jmespath==0.10.0
 msgpack==1.0.0
-mysqlclient @ file:///C:/Users/Owner/Desktop/mysqlclient-1.4.6-cp38-cp38-win32.whl
 pilkit==2.0
 Pillow==7.2.0
 psycopg2-binary==2.8.5
