@@ -64,10 +64,10 @@
                             {% if post.author.profile.image %}
                             <img src = "{{ post.author.profile.image.url }}" width="30px">
                             {% endif %}
-                            <a href="{% url 'accounts:people' post.author %}">{{ post.author }} </a>
+                            <a href="{% url 'accounts:people' people %}">{{ people }} </a>
                         </div>
                         <div class="ud">
-                            {% if post.author == user %}
+                            {% if post.author. == user %}
                             <a href="{% url 'edit' post.id %}">수정</a>
                             <a href="{% url 'delete' post.id %}">삭제</a></p>
                             {% endif %}

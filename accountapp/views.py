@@ -48,7 +48,7 @@ def logout(request):
 
 def people(request, username):
     people = get_object_or_404(get_user_model(), username=username)
-    posts = Post.objects.filter(author=request.user)
+    posts = Post.objects.filter(author=people)
     return render(request, 'people.html', {'people' : people, 'posts':posts})
     
 
